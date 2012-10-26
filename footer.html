@@ -1,0 +1,38 @@
+<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
+	<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+	<ul>
+		<li><a href="index.php" id="home" data-icon="custom">Home</a></li>
+		<li><a href="login.php" id="key" data-icon="custom">Login</a></li>
+		<li><a href="filter.php" id="beer" data-icon="custom">Filter</a></li>
+		<li><a href="#" id="skull" data-icon="custom">Settings</a></li>
+	</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+  $("#home").click(function (event) {
+    $("#home").setAttribute("class", "ui-btn-active");
+    $("#key").setAttribute("class", "");
+    $("#beer").setAttribute("class", "");
+    $("#skull").setAttribute("class", "");
+  });
+  $("#key").click(function (event) {
+    $("#home").setAttribute("class", "");
+    $("#key").setAttribute("class", "ui-btn-active");
+    $("#beer").setAttribute("class", "");
+    $("#skull").setAttribute("class", "");
+  });
+  $("#beer").click(function (event) {
+    $("#home").setAttribute("class", "");
+    $("#key").setAttribute("class", "");
+    $("#beer").setAttribute("class", "ui-btn-active");
+    $("#skull").setAttribute("class", "");
+  });
+  $("#skull").click(function (event) {
+    $("#home").setAttribute("class", "");
+    $("#key").setAttribute("class", "");
+    $("#beer").setAttribute("class", "");
+    $("#skull").setAttribute("class", "ui-btn-active");
+  });
+
+</script>
