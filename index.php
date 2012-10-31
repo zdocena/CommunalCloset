@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>VoteCasterFail</title> 
+	<title>Communal Closet | Welcome</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -26,6 +26,11 @@
   <a href="login.php">
     <button type="button">Login</button> 
   </a>
+  <center>
+    <a href = "newuser.php">
+      New User? Sign Up!  
+    </a>
+  </center>
 
 
 

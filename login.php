@@ -23,19 +23,39 @@
 
 	<div data-role="header">
 	<h1>Log in</h1>
-	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+	
 
 	</div><!-- /header -->
-
+    
+	<!-- <div class="ui-grid">
+	  <div class="ui-block-a"></div>
+	  <div class="ui-block-b">
+	  </div>
+    </div> -->
+	
+	<div data-role="fieldcontain" class="ui-hide-label" data-mini="true">
+	  <label for="username">Username:</label>
+	  <input type="text" name="username" id="username" value="" placeholder="Username"/>
+    </div>
+	
 	<div data-role="content">
-	  Enter any username and password:
-    <label for="foo">Username:</label>
-    <input type="text" name="username" id="foo">
-    <label for="bar">Password:</label>
-    <input type="password" name="password" id="bar">
-    <a href="search.php">
-      <button type="button">Login</button> 
-    </a>
+      <div data-role="fieldcontain">
+	    <label for="userName">Username:</label>
+        <input type="text" name="username" id="userName">
+	  </div>
+	  <div data-role="fieldcontain">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+	  </div>
+    <!-- <div data-role="controlgroup">
+      <a href="search.php" data-role="button" data-theme="b">Login</a>
+      <a href="index.php" data-role="button">Cancel</a>
+    </div> -->
+    
+	<fieldset class="ui-grid-a">
+	  <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
+	  <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
+    </fieldset>
     
 	</div><!-- /content -->
 </div><!-- /page -->
