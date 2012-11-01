@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>VoteCaster | Submit</title> 
+	<title>Communal Closet | Enter</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">

@@ -1,4 +1,5 @@
 <!DOCTYPE html> 
+
 <html>
 
 <head>
@@ -22,21 +23,23 @@
 <div data-role="page">
 
 	<div data-role="header">
-	<h1>Log in</h1>
-	<a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
-
-	</div><!-- /header -->
-
+	  <h1>Login</h1>
+	</div>
 	<div data-role="content">
-	  Enter any username and password:
-    <label for="foo">Username:</label>
-    <input type="text" name="username" id="foo">
-    <label for="bar">Password:</label>
-    <input type="password" name="password" id="bar">
-    <a href="search.php">
-      <button type="button">Login</button> 
-    </a>
-    
+	  <center>
+	    <div class="ui-hide-label" style="width:90%">
+	      <label for="username">Username:</label>
+	      <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+	    <div class="ui-hide-label" style="width:90%">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="" placeholder="Password">
+	    </div>
+	    <fieldset class="ui-grid-a" style="width:95%">
+	      <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
+	      <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
+        </fieldset>
+      </center>  
 	</div><!-- /content -->
 </div><!-- /page -->
 
