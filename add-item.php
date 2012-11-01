@@ -16,16 +16,31 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 
-</head>
-<body>
+</head>  
+<body> 
 
 <div data-role="page">
-  Congratulations!
-  We sent you an email with the contact information of the owner.
-  Contact the owner to schedule a pick up.
+  <h1 align="center">Add a new item</h1>
   </br>
-  Search for more items
-  <a href="search.php">Browse</a>
+  <form action="formActions/add-item.php" method="post">
+    
+    <label for="description">description</label>
+    <input type="text" name="description" id="description" />
+    
+    <label>size</label>
+    <select>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+    </select>
+    
+    <label>price</label>
+    <input type="text" />
+    
+    <label for="imageLink">image url</label>
+    <input type="text" name="imageLink" id="imageLink" />
+    
+  </form>
 </div><!-- /page -->
 
 </body>
