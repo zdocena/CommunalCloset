@@ -35,6 +35,7 @@
   <input type="text" name="password" id="bar">
   <ul data-role="listview" data-inset="true" data-theme="a">
 	<li><a href="acura.html">Available Pick Up Locations</a></li>
+	<li><a href="eastcampus.html">East Campus</a><li>
 </ul>
  <!--input type="text">-->
   <label>Number of Credits for Rental</label>
