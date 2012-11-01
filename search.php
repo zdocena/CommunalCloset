@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 
-<head>
+  <head>
 	<title>Communal Closet | Search</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+
 	<link rel="stylesheet" href="style.css" />
 	<link rel="apple-touch-icon" href="appicon.png" />
 	<link rel="apple-touch-startup-image" href="startup.png">
@@ -16,17 +17,26 @@
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
 
-</head>  
-<body> 
+  </head> 
+  <body> 
+ 
+  <div data-role="page">
+    <div data-role="header">
+	  <h1>Search</h1>
+    </div>
 
-<div data-role="page">
-  <input type="text" />
-  
+    <div data-role="content">
+	  <div class="ui-hide-label" style="width:90%">
+	    <label for="query">Query:</label>
+	    <input type="text" name="query" id="query" placeholder="Search for..."/>
+      </div>
+	  <!-- <input type="text" name="query" id="query"> -->
       <a href="results.php">
-      <button type="button">Search</button> 
-    </a>
+        <button type="button">Search</button> 
+      </a>
+	</div>
     
-</div><!-- /page -->
+  </div><!-- /page -->
 
-</body>
+  </body>
 </html>
