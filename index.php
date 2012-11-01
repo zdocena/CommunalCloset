@@ -21,18 +21,38 @@
 
 	
 <body> 
-  <h1 align="center">Welcome to Communal Closet</h1>
 
-  <a href="login.php">
+  <div data-role="page">
+      <h1 align="center">Welcome to Communal Closet</h1>
+	
+	  <center>
+	    <div class="ui-hide-label" style="width:90%">
+	      <label for="username">Username:</label>
+	      <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+	    <div class="ui-hide-label" style="width:90%">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="" placeholder="Password">
+	    </div>
+	    <a href="search.php" text-align="center" data-role="button" data-theme="b" style="width:90%">Login</a>	   
+        <a href = "newuser.php">
+          New User? Sign Up!  
+        </a>
+	  </center>  
+	  
+  
+  
+  
+  <!-- <a href="login.php">
     <button type="button">Login</button> 
   </a>
   <center>
     <a href = "newuser.php">
       New User? Sign Up!  
     </a>
-  </center>
+  </center> -->
 
-
+  </div><!-- /page -->
 
 </body>
 </html>

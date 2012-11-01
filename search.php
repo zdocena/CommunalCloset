@@ -26,7 +26,11 @@
     </div>
 
     <div data-role="content">
-	  <input type="text" name="query" id="query">
+	  <div class="ui-hide-label" style="width:90%">
+	    <label for="query">Query:</label>
+	    <input type="text" name="query" id="query" placeholder="Search for..."/>
+      </div>
+	  <!-- <input type="text" name="query" id="query"> -->
       <a href="results.php">
         <button type="button">Search</button> 
       </a>

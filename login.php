@@ -1,4 +1,5 @@
 <!DOCTYPE html> 
+
 <html>
 
 <head>
@@ -22,41 +23,23 @@
 <div data-role="page">
 
 	<div data-role="header">
-	<h1>Log in</h1>
-	
-
-	</div><!-- /header -->
-    
-	<!-- <div class="ui-grid">
-	  <div class="ui-block-a"></div>
-	  <div class="ui-block-b">
-	  </div>
-    </div> -->
-	
-	<div data-role="fieldcontain" class="ui-hide-label" data-mini="true">
-	  <label for="username">Username:</label>
-	  <input type="text" name="username" id="username" value="" placeholder="Username"/>
-    </div>
-	
+	  <h1>Login</h1>
+	</div>
 	<div data-role="content">
-      <div data-role="fieldcontain">
-	    <label for="userName">Username:</label>
-        <input type="text" name="username" id="userName">
-	  </div>
-	  <div data-role="fieldcontain">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
-	  </div>
-    <!-- <div data-role="controlgroup">
-      <a href="search.php" data-role="button" data-theme="b">Login</a>
-      <a href="index.php" data-role="button">Cancel</a>
-    </div> -->
-    
-	<fieldset class="ui-grid-a">
-	  <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
-	  <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
-    </fieldset>
-    
+	  <center>
+	    <div class="ui-hide-label" style="width:90%">
+	      <label for="username">Username:</label>
+	      <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+	    <div class="ui-hide-label" style="width:90%">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="" placeholder="Password">
+	    </div>
+	    <fieldset class="ui-grid-a" style="width:95%">
+	      <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
+	      <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
+        </fieldset>
+      </center>  
 	</div><!-- /content -->
 </div><!-- /page -->
 
