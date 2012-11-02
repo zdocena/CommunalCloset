@@ -1,4 +1,3 @@
-<!DOCTYPE html> 
 <html>
 
 <head>
@@ -18,33 +17,26 @@
 
 </head>  
 <body> 
-<body> 
-<!---?php
-	include("config.php");
-	$query = "SELECT * FROM items";
-	$result = mysql_query($query);
-	while ($row = mysql_fetch_assoc($result)) {
-	
-		echo "<option value='".$row["asin"]."'>".$row["title"]."</option>";
-
-	}
-?--->
-var user = localStorage['<?=$_Post["username"]?>']
-var price = localStorage['<?=$_Post["price"]?>'}
-var image = localStorage['<?=$_Post["image"]?>']
-
 <!-- Start of first page -->
-<div data-role="page" id="foo">
+<div data-role="page">
 
 	<div data-role="header">
-		<h1>User Info</h1>
+		<h1>Checkout</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-	  Confirm Your Rental.$_POST["username"]
-	  <td><img width='50' class='pretty' src='".$_Post["image"]."' /></td>
-	  <p>.$_Post["price"]</p> 
-   </div>
+	<div data-role="content"> 
+	<!---td><img width='50' class='pretty' src='".$_Post["image"]."' /></td--->
+	 <img src=http://www.thefashionpolice.net/wp-content/uploads/2009/12/marc-jacobs-sasha-bag.jpg width="104" height="142">
+	 <p> $15/day </p>
+	 <p> Searching for the perfect cross-body bag? Love our feathered friends? Then this may well be just the ticket. Soft-as-butter leather with elegant gold bird-shaped hardware, this Marc by Marc Jacobs number is big enough for a book, brolly, purse and other everyday accoutrements without being so big you feel like you’re lugging the kitchen sink.</p>
+	 <select name="pickup" class="ui-select">
+           <option>Available Pick Up Locations</option>
+           <option value="EastCampus">East Campus</option>
+           <option value="WestCampus">West Campus</option>
+           <option value="Tressider">Tressider</option>
+		   <option value="OakCreek">Oak Creek</option>
+		   <option value="EV">Escondido Village</option>
+         </select>
 	 <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend>Pick-Up Date:</legend>
@@ -87,55 +79,8 @@ var image = localStorage['<?=$_Post["image"]?>']
             </select>
         </fieldset>
 	</div>
-
- <!--input type="text">-->
-  
-  <a href="confirmation.php">
-    <button type="button">Checkout</button> 
- <!-- </a>
-		<p>I'm first in the source order so I'm shown as the page.</p>		
-		<p>View internal page called <a href="#bar">bar</a></p>	
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4></h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-
-<!-- Start of second page -->
-<div data-role="page" id="bar">
-
-	<div data-role="header">
-		<h1>Bar</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>		
-		<p><a href="#foo">Back to foo</a></p>	
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-</body>
-
-<!---<div data-role="page">
-  Enter credit card info:
-  <label for="foo">First Name:</label>
-  <input type="text" name="username" id="foo">
-  <label for="bar">Last Name:</label>
-  <input type="text" name="password" id="bar">
-  <label>Credit Card Number:</label>
-  <input type="text">
-  <label>Address</label>
-  <input type="text">
-  
-  <a href="confirmation.php">
-    <button type="button">Checkout</button> 
-  </a>
-</div><!-- /page -->
-
+	</div>
+	
 </body>
 </html>
+
