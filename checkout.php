@@ -29,7 +29,7 @@
 
 	<div data-role="content">	
 	  Please confirm your Username and Password:
-  <label for="foo">Username:</label>
+  <label for="foo"><strong>?_".$_POST["username"]."</strong></label>
   <input type="text" name="username" id="foo">
   <label for="bar">Password:</label>
   <input type="text" name="password" id="bar">
