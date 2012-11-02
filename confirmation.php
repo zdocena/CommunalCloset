@@ -17,15 +17,16 @@
 	<script src="jquery.mobile-1.2.0.js"></script>
 
 </head>
-<body>
+<body bgcolor= "white">
 
 <div data-role="page">
-  Congratulations!
-  We sent you an email with the contact information of the owner.
-  Contact the owner to schedule a pick up.
-  </br>
-  Search for more items
-  <a href="search.php">Browse</a>
+<center>
+ <p> <h1> Congratulations! </h1></p>
+ <h3>We sent you an email with the contact information of the owner, as well as the pick-up date and location. Thank you for using Communal Closet!</h3>
+ <h3> Want to search for more items?</h3>
+  </center>
+  <a href="search.php"STYLE="text-decoration:none">
+  <button type="button">Browse</button></a>
 </div><!-- /page -->
 
 </body>
