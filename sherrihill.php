@@ -26,28 +26,29 @@
 
 	<div data-role="content"> 
 	<!---td><img width='50' class='pretty' src='".$_Post["image"]."' /></td--->
-		<a href="results.php"STYLE="text-decoration:none">
-		<button type="button">Back</button>
-		</a>
-		<center>
-		<h1> Black Marc Jacobs Dress </h1> 
-		<img src= http://3.bp.blogspot.com/_lewjsjzt0Ec/SRKA_ApaRlI/AAAAAAAACvk/lbBUze2C2ZE/s400/marc+jacobs+dress.jpg width="240" height="370">
-		<h1> $15/day </h1>
-		<p>Want to look hot, but classy, for your next date? Here's the perfect dress! Made from black silk dress with sequin detailing, it will be the perfect dress to make him swoon. It's also great for that night out the girls! Wear a unique Marc Jacobs dress from his couture line. </p>
-		<select name="pickup" class="ui-select">
+	<a href="results.php"STYLE="text-decoration:none">
+	<button type="button">Back</button> 
+	</a>
+	<center>
+	<h1> Silver Sherri Hill Dress </h1> 
+	<img src= http://media-cache0.pinterest.com/upload/216032113345434922_KyGDgjjm_c.jpg width="240" height="370">
+	 <h1> $20/day </h1>
+	 <p>The glittery look of this mini dress by Sherri Hill 2853 is only one of the attention grabbing features of this design. A deep V neckline leads into a fitted bodice and very short skirt. A sheer overlay is noticable as you move and sprinkles of starry embellishments appear to hang from the botton the skirt on their own. A wonderful little design for a sexy night on the town. </p>
+	 <select name="pickup" class="ui-select">
            <option>Available Pick Up Locations</option>
            <option value="EastCampus">East Campus</option>
            <option value="WestCampus">West Campus</option>
            <option value="Tressider">Tressider</option>
 		   <option value="OakCreek">Oak Creek</option>
 		   <option value="EV">Escondido Village</option>
-        </select>
-		<div data-role="fieldcontain">
-			<fieldset data-role="controlgroup">
-				<legend>Pick-Up Date:</legend>
+         </select>
+	</div>
+	 <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend>Pick-Up Date:</legend>
             
-			<label for="select-choice-month">Month</label>
-			<select name="select-choice-month" id="select-choice-month">
+            <label for="select-choice-month">Month</label>
+            <select name="select-choice-month" id="select-choice-month">
                 <option>Month</option>
                 <option value="jan">January</option>
                 <option value="dec">December</option>
@@ -108,13 +109,10 @@
             </select>
         </fieldset>
 	</div>
-	</div>
-	<!---=<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p--->
 		<a href="confirmation.php"STYLE="text-decoration:none">
 		<button type="button">Checkout</button> 
 		</a>
 	</center>
-	</div>
 </body>
 </html>
 

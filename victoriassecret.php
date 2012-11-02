@@ -26,28 +26,29 @@
 
 	<div data-role="content"> 
 	<!---td><img width='50' class='pretty' src='".$_Post["image"]."' /></td--->
-		<a href="results.php"STYLE="text-decoration:none">
+	<a href="results.php"STYLE="text-decoration:none">
 		<button type="button">Back</button>
-		</a>
-		<center>
-		<h1> Black Marc Jacobs Dress </h1> 
-		<img src= http://3.bp.blogspot.com/_lewjsjzt0Ec/SRKA_ApaRlI/AAAAAAAACvk/lbBUze2C2ZE/s400/marc+jacobs+dress.jpg width="240" height="370">
-		<h1> $15/day </h1>
-		<p>Want to look hot, but classy, for your next date? Here's the perfect dress! Made from black silk dress with sequin detailing, it will be the perfect dress to make him swoon. It's also great for that night out the girls! Wear a unique Marc Jacobs dress from his couture line. </p>
-		<select name="pickup" class="ui-select">
+	</a>
+	<center>
+	<h1> Teal Victoria's Secret Dress </h1> 
+	<img src= http://media.victoriassecret.com/product/prodpri2/V351887_2RD.jpg width="240" height="370">
+	 <h1> $5/day </h1>
+	 <p>This little dress is party-ready. All-over sequins mean all-out glamour, and the deep crossover v-neck displays just enough decolletage. Curve-loving, flirty and full of sparkle, this is your go-to dress when fun and fashion are on the agenda. </p>
+	 <select name="pickup" class="ui-select">
            <option>Available Pick Up Locations</option>
            <option value="EastCampus">East Campus</option>
            <option value="WestCampus">West Campus</option>
            <option value="Tressider">Tressider</option>
 		   <option value="OakCreek">Oak Creek</option>
 		   <option value="EV">Escondido Village</option>
-        </select>
-		<div data-role="fieldcontain">
-			<fieldset data-role="controlgroup">
-				<legend>Pick-Up Date:</legend>
+         </select>
+	</div>
+	 <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend>Pick-Up Date:</legend>
             
-			<label for="select-choice-month">Month</label>
-			<select name="select-choice-month" id="select-choice-month">
+            <label for="select-choice-month">Month</label>
+            <select name="select-choice-month" id="select-choice-month">
                 <option>Month</option>
                 <option value="jan">January</option>
                 <option value="dec">December</option>
@@ -73,8 +74,8 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option value="7">7</option>
-				<option value="8">8</option>
+				<option value="7">7</option>
+                <option value="8">8</option>
 				<option value="9">9</option>
 				<option value="10">10</option>
 				<option value="11">11</option>
@@ -98,6 +99,7 @@
 				<option value="29">29</option>
 				<option value="30">30</option>
 				<option value="31">31</option>
+				
             </select>
     
             <label for="select-choice-year">Year</label>
@@ -108,13 +110,9 @@
             </select>
         </fieldset>
 	</div>
-	</div>
-	<!---=<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p--->
-		<a href="confirmation.php"STYLE="text-decoration:none">
-		<button type="button">Checkout</button> 
-		</a>
+		<a href="confirmation.php"STYLE="text-decoration:none"> <!--data-role="button" data-rel="dialog" data-transition="pop" data-theme="b"-->
+		<button type = "button">Checkout</button></a>
 	</center>
-	</div>
 </body>
 </html>
 
