@@ -1,3 +1,21 @@
+<?php
+if (isset($_POST['url'])) {
+    include("config.php");
+
+    $username = $_COOKIE['username'];
+    $img_url = $_POST["url"];
+    $description = $_POST["description"];
+    $size = $_POST["size"];
+    $price = $_POST["price"];
+
+    // add tuple to items table
+    $insert = 'INSERT INTO items (username, description, size, price, image) 
+               VALUES ("'.$username.'", "'.$description.'", "'.$size.'", '.$price.', "'.$img_url.'");';
+
+    $result = mysql_query($insert);
+    header('Location: search.php');
+}
+?>
 <!DOCTYPE html> 
 <html>
 
@@ -29,7 +47,7 @@
     
     <h1 align="center">Add a new item</h1>
     <center text-align="center" style="width:90%">
-      <form action="item_post.php" method="post">
+      <form action="add-item.php" method="post">
         <div class="ui-hide-label" style="width:90%">
           <select class="ui-select">
             <option>Select type of clothing</option>
@@ -39,16 +57,16 @@
             <option>dress</option>
           </select>
     
-          <select name="size" class="ui-select">
+          <select value="<?php echo $size; ?>" name="size" class="ui-select">
             <option>Select size</option>
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
           </select>
       
-          <textarea type="text" name="description" id="description" placeholder="Description"></textarea>
-          <input type="number" name="price" placeholder="price" />
-          <input type="url" name="url" placeholder="image link" value="http://www.google.com"/>
+          <textarea value="<?php echo $description; ?>" type="text" name="description" id="description" placeholder="Description"></textarea>
+          <input value="<?php echo $price; ?>" type="number" name="price" placeholder="price" />
+          <input value="<?php echo $url; ?>" type="url" name="url" placeholder="image link" value="http://www.google.com"/>
           
           <fieldset class="ui-grid-a" style="width:95%">
             <div class="ui-block-a"><a href="search.php" data-role="button">Cancel</a></div>

@@ -24,7 +24,24 @@
 
   <div data-role="page">
     <h1 align="center">Welcome to Communal Closet</h1>
-  
+
+<!--    
+    <center>
+      <div class="ui-hide-label" style="width:90%">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" value="" placeholder="Username"/>
+        </div>
+      <div class="ui-hide-label" style="width:90%">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="" placeholder="Password">
+      </div>
+      <fieldset class="ui-grid-a" style="width:95%">
+        <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
+        <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
+        </fieldset>
+    </center>  
+-->
+
     <center>
       <form action="login_post.php" method="post">
         <div class="ui-hide-label" style="width:90%">
@@ -45,6 +62,7 @@
         </a>
       </form>
     </center> 
+
 
   <!-- <a href="login.php">
     <button type="button">Login</button> 
