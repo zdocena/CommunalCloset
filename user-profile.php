@@ -23,6 +23,7 @@
   <div data-role="page">
     <div data-role="header">
       <h1>Communal Closet</h1>
+      <a href="add-item.php" class="ui-btn-right">+</a>
       <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
     </div><!-- /header -->
   
@@ -33,10 +34,24 @@
           <td>
             <img src="images/default-avatar.png" style="width=50px; height=50px;"/>
           </td>
-          <td>
-          
-          </td>
         </tr>
+        <tr>
+        <?php
+        include("config.php");
+        $query = "SELECT * FROM items";
+        $result = mysql_query($query);
+        while ($row = mysql_fetch_assoc($result)) {
+          $width = $size[0];
+          $ratio = $width / 100;
+          $height = $size[1];
+          $finalW = $width / $ratio;
+          $finalH = $height / $ratio;
+          echo "<td><img width=$finalW height=$finalH class='pretty' src='".$row["image"]."' /></td></td>";
+        } 
+      ?>
+      </tr>
+        
+        
       
       </table>
       

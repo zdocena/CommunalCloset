@@ -20,6 +20,12 @@
 <body> 
 
 <div data-role="page">
+  <div data-role="header">
+    <h1>Communal Closet</h1>
+    <a href="add-item.php" class="ui-btn-right">+</a>
+    <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+  </div><!-- /header -->
+  
   <img src="http://1.bp.blogspot.com/-XEOR_J6G8Ak/Tvn6zOxCgpI/AAAAAAAAJEQ/1aVbzG74PBU/s1600/37.jpg" height="200" width="150"/>
   </br>
   <p>Strapless blue dress. Includes a slim black belt.</p>

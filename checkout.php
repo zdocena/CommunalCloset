@@ -23,9 +23,11 @@
 <!-- Start of first page -->
 <div data-role="page" id="foo">
 
-	<div data-role="header">
-		<h1>User Info</h1>
-	</div><!-- /header -->
+  <div data-role="header">
+    <h1>Communal Closet</h1>
+    <a href="add-item.php" class="ui-btn-right">+</a>
+    <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+  </div><!-- /header -->
 
 	<div data-role="content">	
 	  Please confirm your Username and Password:
