@@ -33,7 +33,7 @@
 		<h1> Black Marc Jacobs Dress </h1> 
 		<img src= http://3.bp.blogspot.com/_lewjsjzt0Ec/SRKA_ApaRlI/AAAAAAAACvk/lbBUze2C2ZE/s400/marc+jacobs+dress.jpg width="240" height="370">
 		<h1> $15/day </h1>
-		<p>Black silk dress with sequin detailing. Cross over v-neckline. Striped sequins down on one side. Solid back. Sequined sash detail at hip. Pleat detail at waist. Combination of sleeveless and cap sleeved style. Hidden side zipper. Fully lined. </p>
+		<p>Want to look hot, but classy, for your next date? Here's the perfect dress! Made from black silk dress with sequin detailing, it will be the perfect dress to make him swoon. It's also great for that night out the girls! Wear a unique Marc Jacobs dress from his couture line. </p>
 		<select name="pickup" class="ui-select">
            <option>Available Pick Up Locations</option>
            <option value="EastCampus">East Campus</option>
@@ -109,12 +109,12 @@
         </fieldset>
 	</div>
 	</div>
-</div>
 	<!---=<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p--->
-		<a href="confirmation.php"STYLE="text-decoration:none>
+		<a href="confirmation.php"STYLE="text-decoration:none">
 		<button type="button">Checkout</button> 
 		</a>
 	</center>
+	</div>
 </body>
 </html>
 

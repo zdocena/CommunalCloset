@@ -109,7 +109,7 @@
             </select>
         </fieldset>
 	</div>
-		<a href="confirmation.php"STYLE="text-decoration:none>
+		<a href="confirmation.php"STYLE="text-decoration:none">
 		<button type="button">Checkout</button> 
 		</a>
 	</center>
