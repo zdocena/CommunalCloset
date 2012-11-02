@@ -26,29 +26,26 @@
       <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
     </div><!-- /header -->
   
-   <h1 align="center">User Profile</h1>
+   <h1 align="center">Closet</h1>
     <center text-align="center" style="width:90%">
+      
       <table>
-        <tr>
-          <td>
-            <img src="images/default-avatar.png" style="width=50px; height=50px;"/>
-          </td>
-          <td>
+        <?php
+          // need to get username
+          include("config.php");
+          $user_query = "SELECT * from items where username = 'zdocena';";
+          $result = mysql_query($user_query);
+
+          while ($row = mysql_fetch_assoc($result)) {
+            echo $row["username"];
+          }
           
-          </td>
+        ?>
+        <tr>
+          
         </tr>
       
       </table>
-      
-      Profile image goes here
-      
-      
-      User's closet goes here
-      <div class="rolling-items">
-
-      </div>
-      
-      Reviews go here
       
     </center>
   </div><!-- /page -->
