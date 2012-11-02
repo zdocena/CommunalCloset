@@ -27,38 +27,47 @@
 
   </div><!-- /header -->
 
-  <div data-role="content"> 
+  <div data-role="content">
     
     <?php
     // This is a hack. You should connect to a database here.
     include("config.php");
-    $username = $_POST["username"];
-    $user_query = "SELECT * from users where username = '".$username."' and password = '".$_POST["password"]."'";
-    $result = mysql_query($user_query);
-    $row = mysql_fetch_assoc($result);
     
-    if ($row["username"] == $username) {
-      ?>
-      <script type="text/javascript">
-        // Save the username in local storage. That way you
-        // can access it later even if the user closes the app.
-        localStorage.setItem('username', '<?=$_POST["username"]?>');
-      </script>
-      <?php
-      echo "<p>Thank you, <strong>".$_POST["username"]."</strong>. You are now logged in.</p>";
-    } else {
-      echo "<p>There seems to have been an error.</p>";
-    }
-      
+    // get fields
 
+    $username = "zdocena";
+    $img_url = $_POST["url"];
+    $description = $_POST["description"];
+    $size = $_POST["size"];
+    $price = $_POST["price"];
+    
+    echo $size;
+    echo $price;
+    echo $description;
+    echo $username;
+    
+    
+    // add tuple to items table
+    $insert = 'INSERT INTO "items" ("username", "description", "size", "price", "image") 
+               VALUES ("'.$username.'", "'.$description.'", "'.$size.'", "'.$price.'", "'.$img_url.'");';
+    
+
+    $result = mysql_query($insert);
+    /*
+    $id = mysql_insert_id();
+    
+    // redirect or show new item
+    if ($id) {
+      echo "Hello"
+    } else {
+      echo "There was an error adding your new item."
+    }
+    */
     ?>
+    
   </div><!-- /content -->
 
 
-  <?php
-  require($DOCUMENT_ROOT . "footer.html");
-  ?>
-  
   
   <script type="text/javascript">
     $("#logout").click(function() {

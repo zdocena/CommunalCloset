@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Communal Closet | Enter</title> 
+  <title>VoteCaster | Submit</title> 
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -22,7 +22,7 @@
 <div data-role="page">
 
   <div data-role="header">
-    <h1>My Title</h1>
+    <h1>Communal Closet</h1>
     <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
 
   </div><!-- /header -->
@@ -37,28 +37,26 @@
     $result = mysql_query($user_query);
     $row = mysql_fetch_assoc($result);
     
+    echo "<p>username = ".$username."</p>";
+    
     if ($row["username"] == $username) {
       ?>
       <script type="text/javascript">
         // Save the username in local storage. That way you
         // can access it later even if the user closes the app.
         localStorage.setItem('username', '<?=$_POST["username"]?>');
+        console.log('<? echo $row ?>');
       </script>
       <?php
       echo "<p>Thank you, <strong>".$_POST["username"]."</strong>. You are now logged in.</p>";
     } else {
-      echo "<p>There seems to have been an error.</p>";
+      echo "<p>The username and password does not match.</p> ";
     }
       
 
     ?>
   </div><!-- /content -->
 
-
-  <?php
-  require($DOCUMENT_ROOT . "footer.html");
-  ?>
-  
   
   <script type="text/javascript">
     $("#logout").click(function() {
