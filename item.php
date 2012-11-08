@@ -1,15 +1,3 @@
-<?php
-  include("config.php");
-  $query = "SELECT * FROM items where id = 13";
-  $result = mysql_query($query);
-	$row = mysql_fetch_assoc($result);
-	
-	$title = $row["title"];
-	$owner = $row["username"];
-	$price = $row["price"];
-	$size = $row["size"];
-	
-?>
 
 <html>
 
@@ -30,8 +18,31 @@
 
 </head>  
 <body> 
+
+
+
+	
 <!-- Start of first page -->
 <div data-role="page">
+	
+	<script type="text/javascript">
+	<?php
+  include("config.php");
+  $query = "SELECT * FROM items where ID = ".$_GET["id"];
+  $result = mysql_query($query);
+	$row = mysql_fetch_assoc($result);
+
+	
+	$title = $row["title"];
+	$owner = $row["username"];
+	$price = $row["price"];
+	$size = $row["size"];
+	$description = $row["description"];
+	$imageUrl = $row["image"];
+	
+?>
+</script>
+	
 
 	<div data-role="header">
 		<h1>Checkout</h1>
@@ -43,10 +54,13 @@
 	<button type="button">Back</button> 
 	</a>
 	<center>
-	<h1> <?php echo "zahara".$title ?> </h1> 
-	<img src= http://media-cache0.pinterest.com/upload/216032113345434922_KyGDgjjm_c.jpg width="240" height="370">
-	 <h1> $20/day </h1>
-	 <p>The glittery look of this mini dress by Sherri Hill 2853 is only one of the attention grabbing features of this design. A deep V neckline leads into a fitted bodice and very short skirt. A sheer overlay is noticable as you move and sprinkles of starry embellishments appear to hang from the botton the skirt on their own. A wonderful little design for a sexy night on the town. </p>
+	
+	<?php echo implode(" | ", $row); ?>
+	
+	<h1> <?php echo $title; ?> </h1> 
+	<?php echo '<img src="'.$imageUrl.'" width="240" height="370">' ?>
+	 <h1> <?php echo '$'.$price.'/day'; ?> </h1>
+	 <p><?php echo $description; ?></p>
 	 <select name="pickup" class="ui-select">
            <option>Available Pick Up Locations</option>
            <option value="EastCampus">East Campus</option>

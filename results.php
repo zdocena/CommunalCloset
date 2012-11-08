@@ -48,8 +48,8 @@
     }
     $table = '<table>';
     for ($x = 0; $x < count($allDresses); ++$x) {
-      $table .= '<tr style="display:block;border:1px solid black"><td><a href="'.$allDresses[$x]["itemlink"].'"><img width=140px height=210px src="'.$allDresses[$x]["image"].'"/></a></td>';
-        $table .= '<td><a style="color: #000000;" href="'.$allDresses[$x]["itemlink"].'"><p>'.$allDresses[$x]["name"].'</p></a><p>Price: $'.$allDresses[$x]["price"].'/day</br>Size: '.$allDresses[$x]["size"].'</br>Owner: <a href="tiffany.php">'.$allDresses[$x]["username"].'</a></p></td></tr>';
+      $table .= '<tr style="display:block;border:1px solid black"><td><a href="item.php/?id='.$allDresses[$x]["ID"].'"><img width=140px height=210px src="'.$allDresses[$x]["image"].'"/></a></td>';
+        $table .= '<td><a style="color: #000000;" href="item.php/?id='.$allDresses[$x]["ID"].'"><p>'.$allDresses[$x]["name"].'</p></a><p>Price: $'.$allDresses[$x]["price"].'/day</br>Size: '.$allDresses[$x]["size"].'</br>Owner: <a href="tiffany.php">'.$allDresses[$x]["username"].'</a></p></td></tr>';
     }
     $table .= '</table>';
       echo $table;
