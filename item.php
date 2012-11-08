@@ -136,9 +136,9 @@
             </select>
         </fieldset>
 	</div>
-		<a href="confirmation.php"STYLE="text-decoration:none">
-		<button type="button">Checkout</button> 
-		</a>
+		
+		<button type="button"><a href="confirmation.php"STYLE="text-decoration:none">Checkout</a></button> 
+		
 	</center>
 </body>
 </html>
