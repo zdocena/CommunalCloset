@@ -1,4 +1,5 @@
 <!DOCTYPE html> 
+
 <html>
 
   <head>
@@ -23,42 +24,65 @@
   <div data-role="page">
     <div data-role="header">
       <h1 align="left">Communal Closet</h1>
-      <a href="add-item.php" class="ui-btn-right">+</a>
-      <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
+      <a href="search.php" data-role="button" data-icon="home" id="home" class="ui-btn-left" data-iconpos="notext"></a>
+      <table>
+        <tr>
+          <td><a href="add-item.php" class="ui-btn-middle">Add item</a></td>
+          <td><a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a></td>
+        </tr>
+      </table>
+      
     </div><!-- /header -->
 
     <div data-role="content">
-    <!--<div class="ui-hide-label" style="width:90%">
-      <label for="query">Query:</label>
-      <input type="text" name="query" id="query" placeholder="Search for..."/>
+    <fieldset class="ui-grid-a">
+      <div class="ui-block-a" style="width:85%">
+        <div class="ui-hide-label">
+      <!--<label for="query">Query:</label>-->
+          <input type="text" name="query" id="query" placeholder="Search for..."/>
       </div>
-    <!-- <input type="text" name="query" id="query"> -->
-      <!-- <a href="results.php">
-        <button type="button">Search</button> 
-      </a> -->
-    <div class="ui-hide-label">
-      <!-- <label for="search-basic">Search Input:</label> -->
-      <input type="search" name="search" id="search-basic" data-icon="search" place-holder="Search for clothes">
     </div>
-    <script type="text/javascript">
-      var w = screen.width;
-      var h = screen.height;
-    </script>
-    <table>
-      <?php
+    <div class="ui-block-b" style="width:15%">
+      <a href="results.php" ><img src="searchicon.jpg" width="40px" height="40px" style="padding-left:2px; padding-top:5px;"/></a>
+    </div>
+      </fieldset>
+    <!-- <input type="text" name="query" id="query"> -->
+      <!--<a href="results.php" img src="searchicon.jpg>
+        <!--<button type="button">Search</button> -->
+      <!--</a>-->
+    <!-- <div class="ui-hide-label">
+      <!-- <label for="search-basic">Search Input:</label> -->
+      <!-- <input type="search" name="search" id="search-basic" data-icon="search" place-holder="Search for clothes">
+    </div> -->
+    
+    
+    <?php 
       include("config.php");
-      $query = "SELECT * FROM items";
-      $result = mysql_query($query);
-      while ($row = mysql_fetch_assoc($result)) {
-        $width = $size[0];
-        $ratio = $width / 100;
-        $height = $size[1];
-        $finalW = $width / $ratio;
-        $finalH = $height / $ratio;
-        echo "<td><img width=$finalW height=$finalH class='pretty' src='".$row["image"]."' /></td></td>";
-      } 
+    $query = "SELECT * FROM items";
+      $allDresses = array();
+    $result = mysql_query($query);
+    while($row = mysql_fetch_assoc($result)) {
+      $allDresses[] = $row;
+    }
+    $table = '<table>';
+    $counter = 0;
+    $total = count($allDresses);
+    if ($total % 2 != 0) {
+      $total += 1;
+    }
+    
+    for ($x = 0; $x < count($allDresses); ++$x) {
+          if ($counter % 2 == 0) {
+        $table .= '<tr><td><a href="'.$allDresses[$x]["itemlink"].'"><img width=140px height=210px src="'.$allDresses[$x]["image"].'"/></a></td>';
+      } else {
+        $table .= '<td><a href="'.$allDresses[$x]["itemlink"].'"><img width=140px height=210px src="'.$allDresses[$x]["image"].'"/></a></td></tr>';
+      }
+      $counter++;
+      #echo "<img width=180px height=276px src='".$allDresses[$x]["image"]."' />";
+    }
+          $table .= '</table>';
+          echo $table;
     ?>
-    </table>
   </div>
     
   </div><!-- /page -->

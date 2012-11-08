@@ -25,7 +25,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content"> 
-	<!---td><img width='50' class='pretty' src='".$_Post["image"]."' /></td--->
+	<!---td><img width='50' class='pretty' src='".$_Post["image"]."' /></td-->
 	<a href="results.php"STYLE="text-decoration:none">
 		<button type="button">Back</button>
 	</a>

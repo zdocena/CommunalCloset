@@ -9,61 +9,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
   <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
-
   <link rel="stylesheet" href="style.css" />
   <link rel="apple-touch-icon" href="appicon.png" />
   <link rel="apple-touch-startup-image" href="startup.png">
   
   <script src="jquery-1.8.2.min.js"></script>
   <script src="jquery.mobile-1.2.0.js"></script>
-
 </head> 
 
   
 <body> 
-
-  <div data-role="page">
-    <h1 align="center">Welcome to Communal Closet</h1>
-
-<!--    
+  <div data-role="page" style="background-image:url(closetimage.jpeg);background-repeat:no-repeat;background-size:cover;">
+      <!-- <h1 align="center"><font color="FFFFFF">Welcome to Communal Closet</font></h1> -->
     <center>
-      <div class="ui-hide-label" style="width:90%">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" value="" placeholder="Username"/>
-        </div>
-      <div class="ui-hide-label" style="width:90%">
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="password" value="" placeholder="Password">
+      <div data-role="header" style="height:22px;padding:10px">
+        Welcome to Communal Closet
+      </div> 
+    
+    <form action="search.php" method="post" style="width:90%">
+      <div class="ui-hide-label">
+        <!--<label for="username">Username:</label>-->
+        <input type="text" name="username" id="username" placeholder="Username"/>
       </div>
-      <fieldset class="ui-grid-a" style="width:95%">
-        <div class="ui-block-a"><a href="index.php" data-role="button">Cancel</a></div>
-        <div class="ui-block-b"><a href="search.php" text-align="center" data-role="button" data-theme="b">Login</a></div>	   
-        </fieldset>
-    </center>  
--->
-
-    <center>
-      <form action="login_post.php" method="post">
-        <div class="ui-hide-label" style="width:90%">
-          <label for="username">Username:</label>
-          <input type="text" name="username" id="username" value="" placeholder="Username"/>
-          </div>
-        <div class="ui-hide-label" style="width:90%">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="" placeholder="Password" />
-        </div>
-        
-        <div text-align="center" style="width:90%">
-          <input type="submit" data-role="button" data-theme="b" style="width:90%" value="Login" />
-        </div>
-      
-        <a href = "newuser.php">
-          New User? Sign Up!  
-        </a>
+      <div class="ui-hide-label">
+        <!--<label for="password">Password:</label>-->
+        <input type="password" name="password" id="password" placeholder="Password"/>
+      </div>
+      <input type="submit" data-theme="b" name="login" value="Login"/>
+      <a href = "newuser.php" data-role="button" data-mini="true" data-inline="true" style="bottom:10px">
+            New User? Sign Up!
+          </a>
       </form>
-    </center> 
-
-
+    </center>  
+    
   <!-- <a href="login.php">
     <button type="button">Login</button> 
   </a>

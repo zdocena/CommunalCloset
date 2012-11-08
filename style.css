@@ -7,4 +7,9 @@
 		#beer .ui-icon { background:  url(glyphish-icons/88-beermug.png) 50% 50% no-repeat;  background-size: 22px 27px; }
 		#coffee .ui-icon { background:  url(glyphish-icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
 		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
-		
+
+#home_background {
+    background-image: "url(closetimage.png)";
+    background-repeat: no-repeat;
+    background-size: cover;
+}
