@@ -27,34 +27,62 @@
   <a href="#" data-icon="check" id="logout" class="ui-btn-right">Logout</a>
   </div>
   <div data-role="content">
+		<center>
     <fieldset class="ui-grid-a">
       <div class="ui-block-a" style="width:85%">
         <div class="ui-hide-label">
       <!--<label for="query">Query:</label>-->
           <input type="text" name="query" id="query" placeholder="Search for more items..."/>
-      </div>
-    </div>
-    <div class="ui-block-b" style="width:15%">
-      <a href="results.php" ><img src="searchicon.jpg" width="40px" height="40px" style="padding-left:2px; padding-top:5px;"/></a>
-    </div>
-      </fieldset>
-    <?php 
-    include("config.php");
-    $query = "SELECT * FROM items";
-    $allDresses = array();
-    $result = mysql_query($query);
-    while($row = mysql_fetch_assoc($result)) {
-    $allDresses[] = $row;
-    }
-    $table = '<table>';
-    for ($x = 0; $x < count($allDresses); ++$x) {
-      $table .= '<tr style="display:block;border:1px solid black"><td><a href="item.php/?id='.$allDresses[$x]["ID"].'"><img width=140px height=210px src="'.$allDresses[$x]["image"].'"/></a></td>';
-        $table .= '<td><a style="color: #000000;" href="item.php/?id='.$allDresses[$x]["ID"].'"><p>'.$allDresses[$x]["name"].'</p></a><p>Price: $'.$allDresses[$x]["price"].'/day</br>Size: '.$allDresses[$x]["size"].'</br>Owner: <a href="tiffany.php">'.$allDresses[$x]["username"].'</a></p></td></tr>';
-    }
-    $table .= '</table>';
-      echo $table;
-  ?>
-  </div>
+      	</div>
+    	</div>
+    	<div class="ui-block-b" style="width:15%">
+      	<a href="results.php" ><img src="searchicon.jpg" width="40px" height="40px" style="padding-left:2px; padding-top:5px;"/></a>
+    	</div>
+		</fieldset>
+		
+		<?php 
+			include("config.php");
+			$query = "SELECT * FROM items";
+			$items = array();
+			$result = mysql_query($query);
+			while($row = mysql_fetch_assoc($result)) {
+				$items[] = $row;
+			}
+			
+			$table = '<table class="itemInfo">';
+			$i = 0;
+			while ($i < count($items)) {
+				// display two items per row
+				$table .= '<tr>';
+				for ($j=0; $j < 2; ++$j) {
+					if ($i < count($items) && $items[$i]["ID"] > 0) {
+						$table .= '<td><table><tr><td> <a href="item.php/?id='.$items[$i]["ID"].'"><img src='.$items[$i]["image"].' class="itemInfo" /></a></td></tr> <tr class="blackInfoBox"><td><span class="align-left">'.$items[$i]["price"].'</span><span>'.$items[$i]["username"].'</span><span class="align-right">'.$items[$i]["size"].'</span></td></tr></table></td>';
+						++$i;
+					}
+				}
+				$table .= '</tr>';
+			}
+			$table .= '</table>';
+			echo $table;
+	  ?>
+
+		<table border="0" cellpadding="0" cellspacing="0" class="itemInfo">
+			<tr>
+				<td>
+					<img src="http://media-cache0.pinterest.com/upload/216032113345434922_KyGDgjjm_c.jpg" class="itemInfo" />
+				</td>
+			</tr>
+			<tr class="blackInfoBox">
+				<td>
+					hello there
+				</td>
+			</tr>
+			
+			
+		</table>
+		</br></br></br></br></br></br>
+		</center>
+  </div><!-- /content -->
 </div><!-- /page -->
 
 </body>

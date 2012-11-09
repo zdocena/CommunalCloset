@@ -8,8 +8,56 @@
 		#coffee .ui-icon { background:  url(glyphish-icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
 		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
 
-#home_background {
+.home_background {
     background-image: "url(closetimage.png)";
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+.itemImageLayer {
+    background-image: "url(images/imagelayer.jpg)";
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 210px;
+}
+
+img.itemInfo {
+    width: 140px;
+    height: 210px;
+}
+
+.blackInfoBox {
+    background-color: black;
+    width: 140px;
+    height: 40px;
+    opacity: .95;
+}
+
+table.itemInfo {
+    background-color: red;
+    border-spacing: 0px;
+}
+
+td.itemInfo {
+    border-style: none;
+    border: 0;
+    font-family: sans-serif;
+    font-style: normal;
+    font-color: white;
+}
+
+tr, td, th {
+    border: none;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+
